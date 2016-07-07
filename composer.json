@@ -1,0 +1,27 @@
+{
+    "name": "dustinleblanc/zotero-api",
+    "description": "Zotero v3 API wrapper",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "~6.1"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.5",
+        "php-vcr/php-vcr": "^1.2",
+        "vlucas/phpdotenv": "^2.3",
+        "codegyre/robo": "1.0.0-beta1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dustin LeBlanc",
+            "email": "dustin.m.leblanc@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "DustinLeblanc\\Zotero\\": "src/"
+        }
+    }
+}
