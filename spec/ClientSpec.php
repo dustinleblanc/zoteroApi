@@ -17,26 +17,25 @@ class ClientSpec extends ObjectBehavior
         $this->apiKey = getenv('API_KEY') ?: 'apikey';
     }
 
+    public function let()
+    {
+        $this->beConstructedWith(['apiKey' => $this->apiKey]);
+    }
 
     function it_accepts_an_api_key()
     {
-        $this->beConstructedWith($this->apiKey);
         $this->getApiKey()->shouldReturn($this->apiKey);
     }
 
     function it_must_have_an_api_key()
     {
-        $this->shouldThrow('InvalidArgumentException')->during('__construct', [null]);
+        $this->shouldThrow('InvalidArgumentException')->during('__construct', [['foo' => 'bar']]);
     }
 
-    function it_passes_key_in_authorization_header()
-    {
-        $this->beConstructedWith($this->apiKey);
-        $this->request()->getHeaderLine('authorization')->shouldReturn($this->apiKey);
-    }
+    
 
     function it_fetches_all_items_in_library()
     {
-        
+
     }
 }
