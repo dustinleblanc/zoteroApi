@@ -6,7 +6,6 @@ use GuzzleHttp\Psr7\Request as GuzzleRequest;
 
 class Request extends GuzzleRequest
 {
-    protected $format = 'json';
 
     public function __construct($method, $uri, array $headers = [], $body, $apiKey)
     {
@@ -15,7 +14,7 @@ class Request extends GuzzleRequest
           $uri,
           array_merge(
             [
-              'authorization' => $apiKey,
+              'Authorization' => "Bearer " . $apiKey,
               'Zotero-API-Version' => 3
             ],
             $headers
@@ -26,20 +25,15 @@ class Request extends GuzzleRequest
     }
 
     /**
-     * @param string $format
-     * @return Request
+     * Append "/items" to the uri path.
+     *
+     * @return $this|\GuzzleHttp\Psr7\Request|static
      */
-    public function setFormat($format)
+    public function items() : Request
     {
-        $this->format = $format;
-        return $this;
-    }
+        $uri = $this->getUri();
+        $uri = $uri->withPath($uri->getPath() . "/items");
 
-    /**
-     * @return string
-     */
-    public function getFormat()
-    {
-        return $this->format;
+        return $this->withUri($uri);
     }
 }

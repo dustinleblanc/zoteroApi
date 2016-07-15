@@ -1,0 +1,118 @@
+
+-
+    request:
+        method: GET
+        url: 'https://api.zotero.org/users/3207908/items'
+        headers:
+            Host: api.zotero.org
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/7.0.8'
+            Authorization: 'Bearer apikey'
+            Accept: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '403'
+            message: Forbidden
+        headers:
+            Date: 'Thu, 14 Jul 2016 13:22:36 GMT'
+            Server: 'Apache/2.4.16 (Amazon)'
+            Content-Length: '11'
+            Content-Type: 'text/html; charset=UTF-8'
+            Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+        body: 'Invalid key'
+-
+    request:
+        method: GETALLITEMS
+        url: 'https://api.zotero.org/users/3207908/items'
+        headers:
+            Host: api.zotero.org
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/7.0.8'
+            Authorization: 'Bearer apikey'
+            Accept: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '501'
+            message: 'Not Implemented'
+        headers:
+            Date: 'Thu, 14 Jul 2016 13:22:36 GMT'
+            Server: 'Apache/2.4.16 (Amazon)'
+            Content-Length: '25'
+            Content-Type: 'text/html; charset=UTF-8'
+            Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+        body: 'Method is not implemented'
+-
+    request:
+        method: GET
+        url: 'https://api.zotero.org/users/3207908/items'
+        headers:
+            Host: api.zotero.org
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/7.0.8'
+            Authorization: 'Bearer 2GIpdUzr3DI6UFblDJYH2IrQ'
+            Accept: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Thu, 14 Jul 2016 13:25:47 GMT'
+            Server: 'Apache/2.4.16 (Amazon)'
+            Zotero-API-Version: '3'
+            Total-Results: '3'
+            Link: '<https://www.zotero.org/users/3207908/items>; rel="alternate"'
+            Last-Modified-Version: '2'
+            Vary: Accept-Encoding
+            Transfer-Encoding: chunked
+            Content-Type: application/json
+            Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+        body: "[\n    {\n        \"key\": \"UG8VUGB4\",\n        \"version\": 2,\n        \"library\": {\n            \"type\": \"user\",\n            \"id\": 3207908,\n            \"name\": \"dustinleblanc\",\n            \"links\": {\n                \"alternate\": {\n                    \"href\": \"https://www.zotero.org/dustinleblanc\",\n                    \"type\": \"text/html\"\n                }\n            }\n        },\n        \"links\": {\n            \"self\": {\n                \"href\": \"https://api.zotero.org/users/3207908/items/UG8VUGB4\",\n                \"type\": \"application/json\"\n            },\n            \"alternate\": {\n                \"href\": \"https://www.zotero.org/dustinleblanc/items/UG8VUGB4\",\n                \"type\": \"text/html\"\n            },\n            \"up\": {\n                \"href\": \"https://api.zotero.org/users/3207908/items/2KAS82WJ\",\n                \"type\": \"application/json\"\n            }\n        },\n        \"meta\": {},\n        \"data\": {\n            \"key\": \"UG8VUGB4\",\n            \"version\": 2,\n            \"parentItem\": \"2KAS82WJ\",\n            \"itemType\": \"attachment\",\n            \"linkMode\": \"linked_url\",\n            \"title\": \"PubMed entry\",\n            \"accessDate\": \"2016-07-06T13:54:45Z\",\n            \"url\": \"http://www.ncbi.nlm.nih.gov/pubmed/27286907\",\n            \"note\": \"\",\n            \"contentType\": \"text/html\",\n            \"charset\": \"\",\n            \"tags\": [],\n            \"relations\": {},\n            \"dateAdded\": \"2016-07-06T13:54:45Z\",\n            \"dateModified\": \"2016-07-06T13:54:45Z\"\n        }\n    },\n    {\n        \"key\": \"2KAS82WJ\",\n        \"version\": 2,\n        \"library\": {\n            \"type\": \"user\",\n            \"id\": 3207908,\n            \"name\": \"dustinleblanc\",\n            \"links\": {\n                \"alternate\": {\n                    \"href\": \"https://www.zotero.org/dustinleblanc\",\n                    \"type\": \"text/html\"\n                }\n            }\n        },\n        \"links\": {\n            \"self\": {\n                \"href\": \"https://api.zotero.org/users/3207908/items/2KAS82WJ\",\n                \"type\": \"application/json\"\n            },\n            \"alternate\": {\n                \"href\": \"https://www.zotero.org/dustinleblanc/items/2KAS82WJ\",\n                \"type\": \"text/html\"\n            }\n        },\n        \"meta\": {\n            \"creatorSummary\": \"Ward et al.\",\n            \"parsedDate\": \"2016-06-07\",\n            \"numChildren\": 1\n        },\n        \"data\": {\n            \"key\": \"2KAS82WJ\",\n            \"version\": 2,\n            \"itemType\": \"journalArticle\",\n            \"title\": \"Outcome and survival in canine sick sinus syndrome and sinus node dysfunction: 93 cases (2002-2014)\",\n            \"creators\": [\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"J. L.\",\n                    \"lastName\": \"Ward\"\n                },\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"T. C.\",\n                    \"lastName\": \"DeFrancesco\"\n                },\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"S. P.\",\n                    \"lastName\": \"Tou\"\n                },\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"C. E.\",\n                    \"lastName\": \"Atkins\"\n                },\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"E. H.\",\n                    \"lastName\": \"Griffith\"\n                },\n                {\n                    \"creatorType\": \"author\",\n                    \"firstName\": \"B. W.\",\n                    \"lastName\": \"Keene\"\n                }\n            ],\n            \"abstractNote\": \"INTRODUCTION: To evaluate the clinical presentation, diagnosis, treatment, and outcomes of a group of dogs with sinoatrial node abnormalities.\\nANIMALS: Ninety-three client-owned dogs at a referral institution.\\nMATERIALS AND METHODS: Medical records were reviewed for clinical history, diagnostic testing, and medical or permanent artificial pacemaker (PAP) treatment. Owners or veterinarians were contacted for long-term follow-up.\\nRESULTS: Sixty-one dogs were symptomatic for their bradyarrhythmia and were diagnosed with sick sinus syndrome (SSS). Thirty-two dogs were asymptomatic for their bradyarrhythmia and were diagnosed with sinus node dysfunction (SND). Miniature Schnauzers, West Highland White terriers, Cocker spaniels, and female dogs were overrepresented. Medical management with positive chronotropic drugs successfully controlled syncope long-term in 54% of SSS dogs, and acted as a bridge to PAP in 20%. Positive atropine response predicted medical treatment success. Forty-six percent of SSS dogs eventually underwent PAP implantation. Median survival time was approximately 18\_months in SND and SSS dogs regardless of treatment strategy. Congestive heart failure (CHF) associated with progressive valvular heart disease occurred commonly in all groups, particularly in dogs with bradycardia-tachycardia syndrome.\\nCONCLUSIONS: Sinus node dysfunction and SSS represent a spectrum of sinoatrial node disease, which for some dogs may also involve a component of autonomic dysfunction. Dogs with SND do not require treatment. Dogs with SSS often require treatment to reduce the frequency of syncope; medical management is often useful, particularly in atropine responsive dogs. Prognosis of SSS with treatment is good, though development of CHF does not appear to be mitigated by treatment.\",\n            \"publicationTitle\": \"Journal of Veterinary Cardiology: The Official Journal of the European Society of Veterinary Cardiology\",\n            \"volume\": \"\",\n            \"issue\": \"\",\n            \"pages\": \"\",\n            \"date\": \"Jun 7, 2016\",\n            \"series\": \"\",\n            \"seriesTitle\": \"\",\n            \"seriesText\": \"\",\n            \"journalAbbreviation\": \"J Vet Cardiol\",\n            \"language\": \"ENG\",\n            \"DOI\": \"10.1016/j.jvc.2016.04.004\",\n            \"ISSN\": \"1875-0834\",\n            \"shortTitle\": \"Outcome and survival in canine sick sinus syndrome and sinus node dysfunction\",\n            \"url\": \"\",\n            \"accessDate\": \"\",\n            \"archive\": \"\",\n            \"archiveLocation\": \"\",\n            \"libraryCatalog\": \"PubMed\",\n            \"callNumber\": \"\",\n            \"rights\": \"\",\n            \"extra\": \"PMID: 27286907\",\n            \"tags\": [\n                {\n                    \"tag\": \"Arrhythmia\",\n                    \"type\": 1\n                },\n                {\n                    \"tag\": \"Bradycardia\",\n                    \"type\": 1\n                },\n                {\n                    \"tag\": \"Dog\",\n                    \"type\": 1\n                },\n                {\n                    \"tag\": \"Pacemaker\",\n                    \"type\": 1\n                },\n                {\n                    \"tag\": \"Sinus arrest\",\n                    \"type\": 1\n                }\n            ],\n            \"collections\": [],\n            \"relations\": {},\n            \"dateAdded\": \"2016-07-06T13:54:45Z\",\n            \"dateModified\": \"2016-07-06T13:54:45Z\"\n        }\n    },\n    {\n        \"key\": \"ABCD2345\",\n        \"version\": 2,\n        \"library\": {\n            \"type\": \"user\",\n            \"id\": 3207908,\n            \"name\": \"dustinleblanc\",\n            \"links\": {\n                \"alternate\": {\n                    \"href\": \"https://www.zotero.org/dustinleblanc\",\n                    \"type\": \"text/html\"\n                }\n            }\n        },\n        \"links\": {\n            \"self\": {\n                \"href\": \"https://api.zotero.org/users/3207908/items/ABCD2345\",\n                \"type\": \"application/json\"\n            },\n            \"alternate\": {\n                \"href\": \"https://www.zotero.org/dustinleblanc/items/ABCD2345\",\n                \"type\": \"text/html\"\n            }\n        },\n        \"meta\": {\n            \"creatorSummary\": \"Center for History and New Media\",\n            \"numChildren\": 0\n        },\n        \"data\": {\n            \"key\": \"ABCD2345\",\n            \"version\": 2,\n            \"itemType\": \"webpage\",\n            \"title\": \"Zotero Quick Start Guide\",\n            \"creators\": [\n                {\n                    \"creatorType\": \"author\",\n                    \"name\": \"Center for History and New Media\"\n                }\n            ],\n            \"abstractNote\": \"\",\n            \"websiteTitle\": \"\",\n            \"websiteType\": \"\",\n            \"date\": \"\",\n            \"shortTitle\": \"\",\n            \"url\": \"http://zotero.org/support/quick_start_guide\",\n            \"accessDate\": \"\",\n            \"language\": \"\",\n            \"rights\": \"\",\n            \"extra\": \"\",\n            \"tags\": [],\n            \"collections\": [],\n            \"relations\": {},\n            \"dateAdded\": \"2016-07-06T13:49:38Z\",\n            \"dateModified\": \"2016-07-06T13:49:38Z\"\n        }\n    }\n]"
+-
+    request:
+        method: GETALLITEMS
+        url: 'https://api.zotero.org/users/3207908/items'
+        headers:
+            Host: api.zotero.org
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/7.0.8'
+            Authorization: 'Bearer 2GIpdUzr3DI6UFblDJYH2IrQ'
+            Accept: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '501'
+            message: 'Not Implemented'
+        headers:
+            Date: 'Thu, 14 Jul 2016 13:25:50 GMT'
+            Server: 'Apache/2.4.16 (Amazon)'
+            Content-Length: '25'
+            Content-Type: 'text/html; charset=UTF-8'
+            Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+        body: 'Method is not implemented'
+-
+    request:
+        method: LIBRARY
+        url: 'https://api.zotero.org/user/3207908'
+        headers:
+            Host: api.zotero.org
+            Accept-Encoding: null
+            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/7.0.8'
+            Authorization: 'Bearer 2GIpdUzr3DI6UFblDJYH2IrQ'
+            Accept: null
+    response:
+        status:
+            http_version: '1.0'
+            code: '404'
+            message: 'Not Found'
+        headers:
+            Date: 'Fri, 15 Jul 2016 13:25:34 GMT'
+            Server: 'Apache/2.4.16 (Amazon)'
+            Vary: Accept-Encoding
+            Content-Length: '69'
+            Content-Type: 'text/html; charset=UTF-8'
+            Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+            Connection: keep-alive
+        body: "<h1>Not Found</h1>\n<p>The page you requested could not be found.</p>\n"

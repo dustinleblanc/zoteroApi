@@ -5,6 +5,7 @@ namespace DustinLeblanc\Zotero;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
@@ -45,7 +46,7 @@ class Client extends GuzzleClient
     /**
      * @return string
      */
-    public function getApiKey()
+    public function getApiKey() : string
     {
         return $this->apiKey;
     }
@@ -54,7 +55,7 @@ class Client extends GuzzleClient
      * @param string $apiKey
      * @return Client
      */
-    public function setApiKey($apiKey)
+    public function setApiKey($apiKey) : Client
     {
         $this->apiKey = $apiKey;
         return $this;
@@ -74,22 +75,17 @@ class Client extends GuzzleClient
      * @return ResponseInterface
      * @throws GuzzleException
      */
-    public function request($method, $uri = null, array $options = [])
+    public function request($method, $uri = null, array $options = []) : ResponseInterface
     {
-        return $this->send(
-          new Request(
-            $method,
-            $uri,
-            $options,
-            $this->getApiKey()
-          )
-        );
+        $options[RequestOptions::SYNCHRONOUS] = true;
+        $options['headers']['Authorization'] = "Bearer " . $this->getApiKey();
+        return $this->requestAsync($method, $uri, $options)->wait();
     }
 
     /**
      * @return string
      */
-    public function getIdentity()
+    public function getIdentity() : string
     {
         return $this->identity;
     }
@@ -98,9 +94,14 @@ class Client extends GuzzleClient
      * @param string $identity
      * @return Client
      */
-    public function setIdentity($identity)
+    public function setIdentity($identity) : Client
     {
         $this->identity = $identity;
         return $this;
+    }
+
+    public function library($prefix = 'user', $id = '', array $options = [], $body = '') : Request
+    {
+        return new Request("get", "$prefix/$id", [], $body, $this->apiKey);
     }
 }
