@@ -2,6 +2,7 @@
     "name": "dustinleblanc/zotero-api",
     "description": "Zotero v3 API wrapper",
     "type": "library",
+    "version": "0.0.1",
     "require": {
         "guzzlehttp/guzzle": "~6.1"
     },
