@@ -50,9 +50,4 @@ class ClientSpec extends ObjectBehavior
              ->getPath()
              ->shouldReturn("users/$this->userId/items");
     }
-
-    function it_retrieves_all_items_in_library()
-    {
-        $this->library('users', $this->userId)->send()->shouldReturn()
-    }
 }
